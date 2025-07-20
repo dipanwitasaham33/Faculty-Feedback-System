@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Registration & Management</title>
+    <link rel="stylesheet" href="facultyregister.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="head-container1"> 
+        <h2>Faculty Registration</h2>
+        <button class="print-btn" onclick="openModal()">Add Faculty</button>
+   </div>
+   
+    <div id="facultyModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Add Faculty</h3>
+            <div class="form-group"><i class="bx bx-user"></i><input type="text" class="input-box" id="name" placeholder="Enter Name" required></div>
+            <div class="form-group"><i class="bx bx-user"></i><input type="text" id="username" class="input-box" placeholder="Enter Username" required></div>
+            <!-- <div class="form-group"><i class="bx bx-lock"></i><input type="password" id="password" class="input-box" placeholder="Enter Password" required></div>-->
+            <div class="form-group"><i class="bx bx-envelope"></i><input type="email" id="email" class="input-box" placeholder="Enter Email" required></div> 
+            <div class="form-group"><i class='bx bxs-graduation'></i><input type="text" id="department" class="input-box" placeholder="Enter Department" required></div>
+            <div class="form-group"> <i class='bx bxs-phone'></i><input type="number" id="phoneno" class="input-box" placeholder="Enter Phone Number" required></div>
+            <button class="btn" onclick="saveFaculty()">Save</button>
+            <input type="hidden" id="editIndex">
+        </div>
+    </div>
+
+    <div class="head-container2">
+        <h2>Registered Faculty</h2>
+        <button class="print-btn" onclick="printTable()">Print Details</button>    
+    </div>
+
+    <table id="facultyTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <!-- <th>Password</th> -->
+                <th>Email</th>
+                <th>Department</th>
+                <th>Phone Number</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="facultyTableBody"></tbody>
+    </table>
+
+    <script>
+        function openModal() {
+            document.getElementById("facultyModal").style.display = "flex";
+        }
+        function closeModal(event) {
+            if (!event || event.target === document.getElementById("facultyModal")) {
+                document.getElementById("facultyModal").style.display = "none";
+            }
+        }
+        function saveFaculty() {
+            let name = document.getElementById("name").value;
+            let username = document.getElementById("username").value;
+            // let password = document.getElementById("password").value;
+            let email = document.getElementById("email").value;
+            let department = document.getElementById("department").value;
+            let phoneno = document.getElementById("phoneno").value;
+            let editIndex = document.getElementById("editIndex").value;
+            let table = document.getElementById("facultyTableBody");
+            
+            if (name && username && email && department && phoneno) {
+                if (editIndex === "") {
+                    let row = table.insertRow();
+                    row.insertCell(0).innerText = name;
+                    row.insertCell(1).innerText = username;
+                    // row.insertCell(2).innerText = password;
+                    row.insertCell(2).innerText = email;
+                    row.insertCell(3).innerText = department;
+                    row.insertCell(4).innerText = phoneno;
+                    row.insertCell(5).innerHTML = `<button class='edit-btn' onclick='editFaculty(this)'>Edit</button>
+                                                  <button class='delete-btn' onclick='deleteFaculty(this)'>Delete</button>`;
+                }else{
+                    let row = table.rows[editIndex];
+                    row.cells[0].innerText = name;
+                    row.cells[1].innerText = username;
+                    // row.cells[2].innerText = password;
+                    row.cells[2].innerText = email;
+                    row.cells[3].innerText = department;
+                    row.cells[4].innerText = phoneno;
+                    document.getElementById("editIndex").value = "";
+                }
+                document.querySelectorAll('.modal input').forEach(input => input.value = "");
+                document.getElementById("editIndex").value = "";
+                closeModal();
+            } 
+            else {
+
+                alert("Please fill all fields.");
+            }
+        }
+        function deleteFaculty(btn) {
+            let row = btn.parentElement.parentElement;
+            row.parentElement.removeChild(row);
+        }
+
+        function editFaculty(btn) {
+            let row = btn.parentElement.parentElement;
+            document.getElementById("name").value = row.cells[0].innerText;
+            document.getElementById("username").value = row.cells[1].innerText;
+            // document.getElementById("password").value = row.cells[2].innerText;
+            document.getElementById("email").value = row.cells[2].innerText;
+            document.getElementById("department").value = row.cells[3].innerText;
+            document.getElementById("phoneno").value = row.cells[4].innerText;
+            document.getElementById("editIndex").value = row.rowIndex - 1;
+            openModal();
+        }
+
+        function printTable() {
+            let printContents = document.getElementById('facultyTable').outerHTML;
+            let originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+
+        
+       
+
+        
+
+
+    </script>
+</body>
+</html>

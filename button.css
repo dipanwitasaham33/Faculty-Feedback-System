@@ -1,0 +1,117 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+
+#header {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #b4a6ff;
+  padding: 10px;
+  text-align: center;
+}
+
+#footer {
+  font-family: "Times New Roman", Times, serif;
+  float: bottom;
+  background-color: #b4a6ff;
+  padding: 10px;
+  text-align: center;
+}
+
+#content {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex: 1;
+}
+
+#left-section {
+  width: 20%;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #ffffff;
+}
+
+#right-section {
+  width: 80%;
+  padding: 10px;
+  background-color: #dbdafa;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+h3 {
+  margin-left: 10px;
+}
+
+#warning {
+  color: rgb(237, 7, 7);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 150px;
+}
+
+.image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.image {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.text {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.button {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

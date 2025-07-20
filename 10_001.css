@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/* body {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+
+ #header
+{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #cfcece;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+#footer {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #c6c6c6;
+    padding: 10px;
+    text-align: center;
+} */
+
+#content {
+  font-family: "Times New Roman", Times, serif;
+  max-width: 100%;
+  margin-left: 170px;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
+#left-section {
+  background-color: #ffffff;
+}
+
+#right-section {
+  margin-left: 170px;
+
+  background-color: transparent;
+  padding: 0.5rem;
+  padding: 10px;
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 100px;
+}
+
+h3 {
+  margin-left: 10px;
+}
+
+#f1 {
+  margin-top: 5px;
+  position: relative;
+}
+
+#det {
+  position: relative;
+  margin-left: 0px;
+  margin-bottom: 3px;
+}
+
+#warning {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(237, 7, 7);
+}
+
+#heading {
+  color: rgb(19, 19, 152);
+  padding: 2mm;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#img1 {
+  width: 100px;
+  height: 100px;
+}
+
+th {
+  background-color: rgb(10, 30, 246);
+  color: rgb(242, 242, 240);
+}
+
+table {
+  background-color: rgb(232, 232, 255);
+  position: relative;
+  margin-left: 50px;
+  margin-right: 50px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  border-collapse: collapse;
+  top: 0px;
+  border-style: none;
+}
+
+tr {
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+th,
+td {
+  padding: 3px;
+  text-align: left;
+  text-align: center;
+  border-bottom: 1px solid rgb(105, 103, 103);
+}
+
+tr:hover {
+  background-color: rgb(208, 208, 205);
+  transform: scale(1.02);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+
+[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  bottom: 20px;
+  cursor: pointer;
+  float: right;
+  margin-right: 100px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  height: 1cm;
+  width: 10;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button {
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+  border: 1px solid rgb(238, 235, 235);
+  padding: 0.5rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  z-index: 1;
+  color: #0d0d0d;
+  cursor: pointer;
+}
+
+button:hover {
+  color: rgb(3, 3, 100);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+  border: 2px solid #185680;
+}

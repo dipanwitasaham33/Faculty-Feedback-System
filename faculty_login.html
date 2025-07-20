@@ -1,0 +1,127 @@
+<html>
+  <head>
+    <title>FACULTY LOGIN</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="icon.png" type="image/x/icon" />
+    <link rel="stylesheet" href="everything.css" />
+  </head>
+  <body>
+    <!--NAV BAR SECTION-->
+
+    <div class="navbar flex-space">
+      <div class="logo-flex">
+        <img src="final_logo.png" width="160px" alt="logo" />
+      </div>
+      <ul class="flex">
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="admin_registration.html">ADMIN</a></li>
+        <li><a href="faculty_registration.html">FACULTY</a></li>
+        <li><a href="student_registration.html">STUDENT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="team.html">TEAM</a></li>
+      </ul>
+    </div>
+    <br /><br /><br />
+    <div class="container">
+      <table>
+        <form>
+          <thead>
+            <th>FACULTY LOGIN</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <label for="name"> NAME: </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter your name"
+                  class="wide-input input-hover"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="pass"> PASSWORD: </label> <br /></td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  type="password"
+                  name="pass"
+                  placeholder="Enter password"
+                  class="wide-input input-hover"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="center">
+                <input type="checkbox" name="remember" value="remember" />
+                Remember Me
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" class="center">
+                <a href="faculty_dashboard.html">
+                  <input type="button" value="LOGIN" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </form>
+      </table>
+    </div>
+    <footer>
+      <div class="footer_info">
+        <div class="footer_width about">
+          <h2>About</h2>
+          <p>
+            Welcome to <b style="color: aqua">Faculty Feedback System</b>, a
+            dedicated platform for enhancing the educational experience through
+            constructive and confidential faculty feedback.Our mission is to
+            create a transparent and collaborative environment where students
+            can share their experiences and this way we can improve the teaching
+            methods.
+          </p>
+        </div>
+        <div class="footer_width link">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="admin_registration.html">ADMIN</a></li>
+            <li><a href="faculty_registration.html">FACULTY</a></li>
+            <li><a href="student_registration.html">STUDENT</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer_width Contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <span><i class="fa-regular fa-envelope"></i></span>
+              <a href="#">facultyfeedback@gmail.com</a>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <a href="#">000 000 0000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy Copyright 2024 | All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

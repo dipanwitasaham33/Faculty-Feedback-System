@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FACULTY DASHBOARD</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="icon.png" type="image/x/icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css"
+    />
+    <link rel="stylesheet" href="faculty_dashboard.css" />
+  </head>
+  <body>
+    <!--NAV BAR SECTION-->
+
+    <div class="navbar flex-space">
+      <div class="logo-flex">
+        <img
+          src="final_logo.png"
+          width="160px"
+          alt="logo"
+        />
+      </div>
+      <ul class="flex">
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="admin_registration.html">ADMIN</a></li>
+        <li><a href="faculty_registration.html">FACULTY</a></li>
+        <li><a href="student_registration.html">STUDENT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="team.html">TEAM</a></li>
+      </ul>
+
+      <div class="menu">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="brand">
+        <span class="lab la-affiliatetheme"></span>
+        <!-- <img src="final_logo.png" alt="logo" height="80px">-->
+      </div>
+
+      <div class="sidemenu">
+        <div class="side-user">
+          <div
+            class="side-img"
+            style="background-image: url(profilepic.jpg)"
+          ></div>
+          <div class="user">
+            <small><b>Dr John Doe</b></small>
+            <p>Principal<br />Faculty ID: F1234</p>
+          </div>
+        </div>
+
+        <ul>
+          <li>
+            <a href="" class="active">
+              <i class="fa-solid fa-id-card"></i>
+              <span>Update Account Details</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <label for="" class="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <!--
+            <div class="search">
+                <input type="search" placeholder="Enter Keyword">
+            </div>
+         -->
+
+        <div class="dashboard">
+          <h2 style="color: rgb(23, 23, 23)">Faculty Dashboard</h2>
+        </div>
+
+        <div>
+          <button onclick="logout()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Log Out
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <div class="cards">
+          <div class="card">
+            <div class="card-icon">
+              <span></span>
+            </div>
+
+            <div class="card-info">
+              <div class="table1">
+                <table width="100%">
+                  <tr align="center">
+                    <th
+                      rowspan="2"
+                      style="
+                        background-color: rgb(10, 30, 246);
+                        color: rgb(242, 242, 240);
+                      "
+                    >
+                      Feedback On
+                    </th>
+                    <th
+                      colspan="5"
+                      style="
+                        background-color: rgb(10, 30, 246);
+                        color: rgb(242, 242, 240);
+                      "
+                    >
+                      Rating
+                    </th>
+                  </tr>
+                  <tr align="center">
+                    <td style="background-color: rgb(38, 233, 38)">5</td>
+                    <td style="background-color: rgb(184, 240, 184)">4</td>
+                    <td style="background-color: rgb(228, 244, 57)">3</td>
+                    <td style="background-color: rgb(241, 128, 111)">2</td>
+                    <td style="background-color: rgb(255, 1, 1)">1</td>
+                  </tr>
+
+                  <tr align="">
+                    <td>
+                      1. How clearly did the faculty member explain the course
+                      objectives and expectations?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      2. Did the faculty member make the class content engaging
+                      and interesting?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      3. Was the course material (textbooks,notes,online
+                      resources) provided by the faculty helpful and sufficient?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      4. How effectively did the faculty manage time during
+                      lectures and cover the syllabus?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      5. How responsive was the faculty member to students
+                      questions and concerns during lectures?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      6. How effectively did the faculty member present and
+                      explain complex topics?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      7. Did the faculty complete the syllabus within the
+                      alloted time frame?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      8. Did the faculty give students enough time to prepare
+                      for exams and assignments?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      9. Was the faculty punctual in attending scheduled
+                      classes?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      10. Do faculty treat all students fairly and without bias?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <tr align="">
+                    <td>
+                      11. How often did the faculty motivate and encourage
+                      students to perform better?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      12. How respectful and polite is the faculty member when
+                      interacting with the students?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr align="">
+                    <td>
+                      13. Was the faculty open to answering unexpected or
+                      challenging questions from students?
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">
+              <span></span>
+            </div>
+
+            <div class="table2">
+              <table width="100%">
+                <tr align="center">
+                  <th
+                    style="
+                      background-color: rgb(20, 123, 242);
+                      color: rgb(242, 242, 240);
+                    "
+                  >
+                    RATING
+                  </th>
+                  <th
+                    style="
+                      background-color: rgb(49, 63, 223);
+                      color: rgb(242, 242, 240);
+                    "
+                  >
+                    GRADE
+                  </th>
+                </tr>
+
+                <tr align="center">
+                  <td
+                    style="
+                      background-color: rgb(40, 219, 9);
+                      color: rgb(0, 0, 0);
+                    "
+                  >
+                    5
+                  </td>
+                  <td>BEST</td>
+                </tr>
+
+                <tr align="center">
+                  <td
+                    style="
+                      background-color: rgb(167, 243, 154);
+                      color: rgb(0, 0, 0);
+                    "
+                  >
+                    4
+                  </td>
+                  <td>GOOD</td>
+                </tr>
+
+                <tr align="center">
+                  <td
+                    style="
+                      background-color: rgb(255, 251, 4);
+                      color: rgb(0, 0, 0);
+                    "
+                  >
+                    3
+                  </td>
+                  <td>NEUTRAL</td>
+                </tr>
+
+                <tr align="center">
+                  <td
+                    style="
+                      background-color: rgb(245, 143, 143);
+                      color: rgb(0, 0, 0);
+                    "
+                  >
+                    2
+                  </td>
+                  <td>SATISFACTORY</td>
+                </tr>
+
+                <tr align="center">
+                  <td
+                    style="
+                      background-color: rgb(255, 0, 0);
+                      color: rgb(0, 0, 0);
+                    "
+                  >
+                    1
+                  </td>
+                  <td>NOT SATISFACTORY</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!--PIE AND BAR CHART SECTION-->
+
+        <div class="barandpiechart">
+          <div class="chart">
+            <canvas id="barchart" width="800" height="800"></canvas>
+          </div>
+         
+
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          <script src="chart1.js"></script>
+          
+        </div>
+
+        <div class="comment-section"></div>
+      </main>
+    </div>
+
+    <!--FOOTER SECTION-->
+
+    <footer>
+      <div class="footer_info">
+        <div class="footer_width about">
+          <h2>About</h2>
+          <p>
+            Welcome to <b style="color: aqua">Faculty Feedback System</b>, a
+            dedicated platform for enhancing the educational experience through
+            constructive and confidential faculty feedback.Our mission is to
+            create a transparent and collaborative environment where students
+            can share their experiences and this way we can improve the teaching
+            methods.
+          </p>
+        </div>
+        <div class="footer_width link">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="admin_registration.html">ADMIN</a></li>
+            <li><a href="faculty_registration.html">FACULTY</a></li>
+            <li><a href="student_registration.html">STUDENT</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer_width Contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <span><i class="fa-regular fa-envelope"></i></span>
+              <a href="#">facultyfeedback@gmail.com</a>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <a href="#">000 000 0000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy Copyright 2024 | All Rights Reserved</p>
+      </div>
+    </footer>
+
+
+    <script>
+      function logout(){
+      window.location.href="homepage.html";
+  }
+    </script>
+  </body>
+</html>

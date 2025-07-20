@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/*body {
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;  
+}*/
+
+/* #header
+{
+    font-family: 'Times New Roman', Times, serif;
+    height:70px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    background: rgb(217, 215, 215);
+    padding:0rem 1rem;
+    position:fixed;
+    left:calc(280px + 1rem);
+    right:1rem;
+    top:.5rem;
+    border-radius:3px;
+    margin-top:80px;
+    z-index: 1000;
+    box-shadow: 0 5px 5px rgb(116, 114, 114); 
+    
+}
+*/
+
+#content {
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 170px;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+
+#left-section {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #ffffff;
+}
+
+#right-section {
+  margin-left: 170px;
+  min-height: 100vh;
+  background-color: transparent;
+  padding: 0.5rem;
+  padding: 10px;
+  display: grid;
+  grid-gap: 1rem;
+  margin-top: 100px;
+}
+
+h3 {
+  font-family: "Times New Roman", Times, serif;
+  margin-left: 10px;
+}
+
+#warning {
+  text-align: center;
+  color: rgb(237, 7, 7);
+  font-family: "Times New Roman", Times, serif;
+}
+
+.column {
+  flex: 1;
+  margin: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.image {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.text {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.button {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button {
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+  border: 1px solid rgb(238, 235, 235);
+  padding: 0.5rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  z-index: 1;
+  color: #0d0d0d;
+  cursor: pointer;
+}
+
+button:hover {
+  color: rgb(3, 3, 100);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+  border: 2px solid #185680;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

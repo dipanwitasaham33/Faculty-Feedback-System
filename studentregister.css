@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
+* { 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+} 
+
+   
+
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+
+    background-image:
+url('faculty.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+}
+.modal-content {
+    max-width: 700px;
+    width:90%;
+    background: rgba(7, 219, 243, 0.207);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    background: rgba(7, 219, 243, 0.207);
+    border:2px solid  rgba(9, 9, 240, 0.415);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.858);
+    backdrop-filter: blur(20px);
+}
+
+h3{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color:rgb(4, 52, 92);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    color:rgb(116, 26, 26);
+    cursor: pointer;
+}
+
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    
+}
+
+.form-group i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgba(8, 27, 232, 0.452);
+    border-radius: 6px;
+
+    background: transparent;
+    border:3px solid rgba(8, 27, 232, 0.452);
+    outline: none;
+    font-size: 18px;
+    color:rgb(9, 57, 134);
+    border-radius: 6px;
+    padding: 15px 15px 15px 40px;
+}
+
+i{
+    color:rgb(8, 8, 111);
+
+}
+
+.btn{
+margin-top:20px;
+width:100%;
+height:50px;
+background: rgba(72, 242, 242, 0.788);
+border: none;
+outline: none;
+border-radius: 15px;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+cursor: pointer;
+font-size: 22px;
+color: #333;
+font-weight: 600;
+transition:all 0.2 ease-in-out;
+box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+} 
+
+.btn:active{
+transform: translateY(3px);
+box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+input::placeholder{
+color:#000608;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+th, td {
+    border: 1px solid #989595;
+    padding: 12px;
+    text-align: center;
+}
+
+th{
+   background:linear-gradient(to right,#444444,#222);
+   color:rgb(219, 217, 217);
+}
+
+tr{
+    transition: transform 0.3s,box-shadow 0.3s;
+}
+
+tr:hover{
+    transform: scale(1.02);
+    box-shadow:0px 4px 10px rgba(0,0,0,0.3);
+}
+
+.edit-btn, .delete-btn {
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    color: white;
+}
+.edit-btn { background-color: #f0ad4e; }
+.delete-btn { background-color: #d9534f; }
+
+
+.print-btn{
+     background-color: #007bff;
+     color:white;
+     padding: 10px 20px;
+     border:none;
+     border-radius: 5px;
+     font-size: 16px;
+     cursor: pointer;
+     box-shadow: 4px 4px 0px #0056b3;
+     transition: all 0.2s ease-in-out;
+     font-weight:bold;
+     display: flex;
+
+}
+
+.print-btn:hover{
+    box-shadow: 2px 2px 0px #004080;
+    transform: translateY(2px);
+}
+
+.head-container1{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 20vh;
+text-align: center;
+gap: 20px;
+
+} 
+
+.head-container2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20vh;
+    text-align: center;
+    
+    
+}
+
+h2{
+   font-size: 24px;
+   font-weight: bold;
+   padding: 10px 20px;
+   color: rgb(1, 1, 1);
+   text-shadow: 2px 2px 5px rgb(230, 238, 15);
+
+
+}
+
+

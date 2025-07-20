@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN DASHBOARD</title>
+    <link rel="stylesheet" href="admindashboard.css">
+    
+    <link rel="icon" href="icon.png" type="image/x/icon" />
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>FACULTY DETAILS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link rel="icon" href="icon.png" type="image/x/icon" />
+    <link rel="stylesheet" href="admin_dashboard.css">
+     <link rel="stylesheet" href="button.css">
+
+    
+    <link rel="icon" href="icon.png" type="image/x/icon">
+
+
+</head>
+<body>
+     
+ <!--NAV BAR SECTION-->
+
+ <div class="navbar flex-space">
+    <div class="logo-flex">
+        <img src="final_logo.png" width="160px" alt="logo">
+     
+    </div>
+    <ul class="flex">
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="admin_registration.html">ADMIN</a></li>
+        <li><a href="faculty_registration.html">FACULTY</a></li>
+        <li><a href="student_registration.html">STUDENT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="team.html">TEAM</a></li>
+      </ul>
+
+    <div class="menu">
+        <i class="ri-menu-line"></i>
+    </div>
+</div>
+
+
+
+
+    <div class="sidebar">
+        <div class="brand">
+            <span class="lab la-affiliatetheme"></span>
+           <!-- <img src="final_logo.png" alt="logo" height="80px">-->
+        </div>
+
+          <div class="sidemenu">
+            <div class="side-user">
+                <div class="side-img" style="background-image: url(profilepic.jpg)"></div>
+                <div class="user">
+                    <small><b>Dr John Doe</b></small>
+                    <p>Associate Professor,<br>Computer Science</p>
+                </div>
+            </div>
+
+            <!-- <ul>
+                <li>
+                    <a href="" class="active">
+                        <i class="fa-solid fa-id-card"></i>
+                         <span>Faculty Details</span>
+                    </a>
+                </li>
+
+        
+                
+                <li>
+                    <a href="">
+                        <i class="fa-solid fa-id-card"></i>
+                         <span>Settings</span>
+                    </a>
+                </li>
+
+            </ul> -->
+
+          </div>
+    </div>
+       
+    <div class="main-content">
+         <header>
+            <label for="" class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+
+            </label>
+
+
+
+         <div class="dashboard">
+            <h2 style="color: rgb(23, 23, 23);">Admin Dashboard</h2>
+         </div>
+
+
+            <div>
+                <button onclick="logout()">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Log Out
+                </button>
+            </div>
+        
+        </header>
+
+
+    <div class="admincontainer">
+        <div class="box" onclick="navigateTo('facultyregister.html')">
+            <img src="fms.png" alt="Faculty Management">
+            <p>Faculty Management System</p>
+        </div>
+        <div class="box" onclick="navigateTo('studentregister.html')">
+            <img src="sms.png" alt="Student Management">
+            <p>Student Management System</p>
+        </div>
+        <div class="box" onclick="navigateTo('viewfeedback.html')">
+            <img src="vf.webp" alt="View Feedback">
+            <p>View Feedback</p>
+        </div>
+    </div>
+   
+<script>
+
+function navigateTo(url) {
+    window.location.href = url;
+}
+
+function logout(){
+    window.location.href="homepage.html";
+}
+
+    </script>
+</body>
+</html> 
+
+
+
+
+
+

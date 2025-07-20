@@ -1,0 +1,222 @@
+<html>
+  <head>
+    <title>FACULTY REGISTRATION</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="icon.png" type="image/x/icon" />
+    <link rel="stylesheet" href="everything.css" />
+  </head>
+
+
+  <body>
+    <!--NAV BAR SECTION-->
+
+    <div class="navbar flex-space">
+      <div class="logo-flex">
+        <img src="final_logo.png" width="160px" alt="logo" />
+      </div>
+      <ul class="flex">
+        <li><a href="homepage.html">HOME</a></li>
+        <li><a href="admin_registration.html">ADMIN</a></li>
+        <li><a href="faculty_registration.html">FACULTY</a></li>
+        <li><a href="student_registration.html">STUDENT</a></li>
+        <li><a href="contact.html">CONTACT US</a></li>
+        <li><a href="team.html">TEAM</a></li>
+      </ul>
+    </div>
+    <br /><br /><br />
+
+
+  
+
+    
+    <div class="form" id="login-form">
+      <div class="form-header">
+          <h2>Login to Your Account</h2>
+          <p>Welcome! Login to Access to Your Dashboard!!</p>
+      </div>
+      
+      <div class="form-input">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter Username">
+      </div>
+      
+      <div class="form-input">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter Password">
+      </div>
+
+      <div class="captcha">
+          <label for="captcha-input">Enter Captcha</label>
+          <div class="preview"></div>
+              <div class="captcha-form">
+                  <input type="text" id="captcha-form" placeholder="Enter Captcha Text">
+                  <button class="captcha-refresh">
+                      <i class="fa fa-refresh"></i>
+                  </button>
+              </div>
+          </div>
+      
+
+
+
+      <div class="support-links">
+          <a href="#"><i>Forget Password?</i></a> 
+          <a href="#"><i>Need Help? Contact Support.</i></a></p> 
+      </div>
+      
+
+
+      <div class="form-submit">
+          <button id="loginBtn">Login</button>
+      </div>
+      
+      
+      <!--forget password form-->
+  </div>
+</div>
+  </div>
+
+    <footer>
+      <div class="footer_info">
+        <div class="footer_width about">
+          <h2>About</h2>
+          <p>
+            Welcome to <b style="color: aqua">Faculty Feedback System</b>, a
+            dedicated platform for enhancing the educational experience through
+            constructive and confidential faculty feedback.Our mission is to
+            create a transparent and collaborative environment where students
+            can share their experiences and this way we can improve the teaching
+            methods.
+          </p>
+        </div>
+        <div class="footer_width link">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="admin_registration.html">ADMIN</a></li>
+            <li><a href="faculty_registration.html">FACULTY</a></li>
+            <li><a href="student_registration.html">STUDENT</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer_width Contact">
+          <h2>Contact</h2>
+          <ul>
+            <li>
+              <span><i class="fa-regular fa-envelope"></i></span>
+              <a href="#">facultyfeedback@gmail.com</a>
+            </li>
+            <li>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <a href="#">000 000 0000</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p>&copy Copyright 2024 | All Rights Reserved</p>
+      </div>
+    </footer>
+
+</div>
+
+    <script>
+    
+      function showForgetPassword() {
+          document.getElementById("login-form").classList.add("hidden");
+          document.getElementById("forget-password-form").classList.remove("hidden");
+      }
+  
+      function showLoginForm() {
+          document.getElementById("forget-password-form").classList.add("hidden");
+          document.getElementById("login-form").classList.remove("hidden");
+      }
+  
+      document.querySelector("#username").addEventListener("input",(e)=>{
+      const value = e.target.value;
+      const node = e.target.parentNode;
+      node.classList.remove("error");
+      node.classList.remove("valid");
+      if(value.length < 6){
+          node.classList.add("error");
+      }
+      else{
+          node.classList.add("valid");
+      }
+  
+  })
+  
+  document.querySelector("#password").addEventListener("input",(e)=>{
+      const value = e.target.value;
+      const node = e.target.parentNode;
+      node.classList.remove("error");
+      node.classList.remove("valid");
+      if(value.length < 8){
+          node.classList.add("error");
+      }
+      else{
+          node.classList.add("valid");
+      }
+  
+  });
+  
+  
+  
+  (function(){
+      const fonts = ["cursive", "sans-serif", "serif", "monospace"];
+      let captchaValue = "";
+  
+      function generateCaptcha(){
+          let value = btoa(Math.random() * 1000000000);
+          value = value.substr(0, 5 + Math.random() * 5);
+          captchaValue = value;
+      }
+  
+      function setCaptcha(){
+          let html = captchaValue.split("").map((char) => {
+              const rotate = -20 + Math.trunc(Math.random() * 40);
+              const font = Math.trunc(Math.random() * fonts.length);
+              return `<span style="display: inline-block; transform: rotate(${rotate}deg); font-family: ${fonts[font]};">${char}</span>`;
+          }).join("");
+  
+          document.querySelector(".captcha .preview").innerHTML = html;
+      }
+  
+      function initCaptcha(){
+          document.querySelector(".captcha .captcha-refresh").addEventListener("click", function(){
+              generateCaptcha();
+              setCaptcha();
+          });
+  
+          generateCaptcha();
+          setCaptcha();
+      }
+  
+      initCaptcha();
+  
+      document.querySelector(".form-submit button").addEventListener("click", function(){
+          let inputCaptchaValue = document.querySelector("#captcha-form").value.trim();
+          
+          if (inputCaptchaValue === captchaValue) {
+              alert("Logging In!!");
+              document.getElementById("loginBtn");
+              addEventListener("click", function(){
+              window.location.href = "faculty_dashboard.html";
+          });
+        }else {
+              alert("Invalid CAPTCHA");
+          }
+      });
+  })();
+  
+  
+  </script>
+  
+  </body>
+</html>

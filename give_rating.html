@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK FORM</title>
+    <link rel="stylesheet" href="10_001.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="icon.png" type="image/x/icon" />
+</head>
+<body>
+  <div class="navbar flex-space">
+    <div class="logo-flex">
+        <img src="final_logo.png" width="160px" alt="logo">
+     
+    </div>
+    <ul class="flex">
+      <li><a href="homepage.html">HOME</a></li>
+      <li><a href="admin_registration.html">ADMIN</a></li>
+      <li><a href="faculty_registration.html">FACULTY</a></li>
+      <li><a href="student_registration.html">STUDENT</a></li>
+      <li><a href="contact.html">CONTACT US</a></li>
+      <li><a href="team.html">TEAM</a></li>
+    </ul>
+
+    <div class="menu">
+        <i class="ri-menu-line"></i>
+    </div>
+</div>
+<header>
+    <label for="" class="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+
+    </label>
+
+<!--
+    <div class="search">
+        <input type="search" placeholder="Enter Keyword">
+    </div>
+ -->
+
+
+ <div class="dashboard">
+    <h2 style="color: rgb(23, 23, 23);">Student Dashboard</h2>
+ </div>
+
+
+    <div>
+        <button>
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Log Out
+        </button>
+    </div>
+
+</header>
+<div class="content" id="content">
+        <div class="sidebar">
+            <div class="brand">
+                <span class="lab la-affiliatetheme"></span>
+               <!-- <img src="final_logo.png" alt="logo" height="80px">-->
+            </div>
+    
+              <div class="sidemenu">
+                <div class="side-user">
+                    <div class="side-img" style="background-image: url(profilepic.jpg)"></div>
+                    <div class="user">
+                        <small><b>John Doe</b></small>
+                        <p>Student<br>BCA<br>Fifth Semester</p>
+                    </div>
+                </div>
+    
+                <ul>
+    
+            
+                    
+                    <li>
+                        <a href="">
+                            <i class="fa-solid fa-id-card"></i>
+                             <span>Settings</span>
+                        </a>
+                    </li>
+    
+                </ul>
+    
+              </div>
+        </div>
+        <div class="right-section" id="right-section">
+
+        <h2 id="warning">
+            <br><br><br>ONE STUDENT CAN SUBMIT FEEDBACK ONLY ONCE A MONTH.</h2>
+
+
+        <h2 id="heading">Feedback Form: Rate on the basis of the given parameters where 1 is the lowest and 5 is the highest.</h2>
+
+
+        <div id="det">
+        
+        </div>
+
+
+        <form action="" method="get">
+        
+        <div  class="t1">
+           <table align="center">
+                <thead>
+                  <tr>
+                    <th colspan="1">Category</th>
+                    <th colspan="6">Rating</th>
+                  </tr>
+                </thead>
+                      <tr><td>
+                        <label for="obj">1. How clearly did the faculty member explain the course objectives and expectations?</label></td>
+                        <td>1<input type="radio" id="obj" name="obj" value="1">
+                        2<input type="radio" id="obj" name="obj" value="2">
+                        3<input type="radio" id="obj" name="obj" value="3">
+                        4<input type="radio" id="obj" name="obj" value="4">
+                        5<input type="radio" id="obj" name="obj" value="5">
+                      </td></tr>
+                        <tr><td><label for="int">2. Did the faculty member make the class content engaging and interesting?</label></td>
+                        <td>1<input type="radio" id="int" name="int" value="1">
+                        2<input type="radio" id="int" name="int" value="2">
+                        3<input type="radio" id="int" name="int" value="3">
+                        4<input type="radio" id="int" name="int" value="4">
+                        5<input type="radio" id="int" name="int" value="5">
+                      </td>
+                      </tr>
+                        <tr><td><label for="mat">3. Was the course material (textbooks,notes,online resources) provided by the faculty helpful and sufficient?</label></td>
+                        <td>
+                        1<input type="radio" id="mat" name="mat" value="1">
+                        2<input type="radio" id="mat" name="mat" value="2">
+                        3<input type="radio" id="mat" name="mat" value="3">
+                        4<input type="radio" id="mat" name="mat" value="4">
+                        5<input type="radio" id="mat" name="mat" value="5">
+                      </td>
+                      </tr>
+                      <tr>
+                        <td><label for="completedSyllabus">4. How effectively did the faculty manage time during lectures and cover the syllabus?</label></td>
+                        <td>
+                        1<input type="radio" id="completedSyllabus" name="completedSyllabus" value="1">
+                        2<input type="radio" id="completedSyllabus" name="completedSyllabus" value="2">
+                        3<input type="radio" id="completedSyllabus" name="completedSyllabus" value="3">
+                        4<input type="radio" id="completedSyllabus" name="completedSyllabus" value="4">
+                        5<input type="radio" id="completedSyllabus" name="completedSyllabus" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="res">5. How responsive was the faculty member to students questions and concerns during lectures?</label></td>
+                        <td>
+                        1<input type="radio" id="res" name="res" value="1">
+                        2<input type="radio" id="res" name="res" value="2">
+                        3<input type="radio" id="res" name="res" value="3">
+                        4<input type="radio" id="res" name="res" value="4">
+                        5<input type="radio" id="res" name="res" value="5">
+                      </td></tr>
+                      
+                      <tr>
+                        <td><label for="eff">6. How effectively did the faculty member present and explain complex topics?</label></td>
+                        <td>
+                        1<input type="radio" id="eff" name="eff" value="1">
+                        2<input type="radio" id="eff" name="eff" value="2">
+                        3<input type="radio" id="eff" name="eff" value="3">
+                        4<input type="radio" id="eff" name="eff" value="4">
+                        5<input type="radio" id="eff" name="eff" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="time">7. Did the faculty complete the syllabus within the alloted time frame?</label></td>
+                        <td>
+                        1<input type="radio" id="time" name="time" value="1">
+                        2<input type="radio" id="time" name="time" value="2">
+                        3<input type="radio" id="time" name="time" value="3">
+                        4<input type="radio" id="time" name="time" value="4">
+                        5<input type="radio" id="time" name="time" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="t">8. Did the faculty give students enough time to prepare for exams and assignments?</label></td>
+                        <td>
+                        1<input type="radio" id="t" name="t" value="1">
+                        2<input type="radio" id="t" name="t" value="2">
+                        3<input type="radio" id="t" name="t" value="3">
+                        4<input type="radio" id="t" name="t" value="4">
+                        5<input type="radio" id="t" name="t" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="punctual">9. Was the faculty punctual in attending scheduled classes?</label></td>
+                        <td>
+                        1<input type="radio" id="punctual" name="punctual" value="1">
+                        2<input type="radio" id="punctual" name="punctual" value="2">
+                        3<input type="radio" id="punctual" name="punctual" value="3">
+                        4<input type="radio" id="punctual" name="punctual" value="4">
+                        5<input type="radio" id="punctual" name="punctual" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="fair">10. Do faculty treat all students fairly and without bias?</label></td>
+                        <td>
+                        1<input type="radio" id="fair" name="fair" value="1">
+                        2<input type="radio" id="fair" name="fair" value="2">
+                        3<input type="radio" id="fair" name="fair" value="3">
+                        4<input type="radio" id="fair" name="fair" value="4">
+                        5<input type="radio" id="fair" name="fair" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="motivate">11. How often did the faculty motivate and encourage students to perform better?</label></td>
+                        <td>
+                        1<input type="radio" id="motivate" name="motivate" value="1">
+                        2<input type="radio" id="motivate" name="motivate" value="2">
+                        3<input type="radio" id="motivate" name="motivate" value="3">
+                        4<input type="radio" id="motivate" name="motivate" value="4">
+                        5<input type="radio" id="motivate" name="motivate" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="respectful">12. How respectful and polite is the faculty member when interacting with the students?</label></td>
+                        <td>
+                        1<input type="radio" id="respectful" name="respectful" value="1">
+                        2<input type="radio" id="respectful" name="respectful" value="2">
+                        3<input type="radio" id="respectful" name="respectful" value="3">
+                        4<input type="radio" id="respectful" name="respectful" value="4">
+                        5<input type="radio" id="respectful" name="respectful" value="5">
+                      </td></tr>
+                      <tr>
+                        <td><label for="questions">13. Was the faculty open to answering unexpected or challenging questions from students?</label></td>
+                        <td>
+                        1<input type="radio" id="questions" name="questions" value="1">
+                        2<input type="radio" id="questions" name="questions" value="2">
+                        3<input type="radio" id="questions" name="questions" value="3">
+                        4<input type="radio" id="questions" name="questions" value="4">
+                        5<input type="radio" id="questions" name="questions" value="5">
+                      </td></tr>
+                      </tbody></table> </div> 
+                      <div class ="b1" id="submit">
+                        <input type="submit" value="Submit Feedback">
+                        </div>
+              </form>  
+              </div>
+    </div>
+    <footer>
+      <div class="footer_info">
+       <div class="footer_width about">
+           <h2>About</h2>
+           <p>Welcome to <b style="color:aqua">Faculty Feedback System</b>, a dedicated platform for enhancing the
+              educational experience through constructive and confidential faculty feedback.Our mission is
+                  to create a transparent and collaborative
+                  environment where students can share their experiences and this way we can improve the
+              teaching
+              methods.</p>
+       </div>
+       <div class="footer_width link">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="homepage.html">HOME</a></li>
+            <li><a href="admin_registration.html">ADMIN</a></li>
+            <li><a href="faculty_registration.html">FACULTY</a></li>
+            <li><a href="student_registration.html">STUDENT</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+       </div>
+       <div class="footer_width Contact">
+          <h2>Contact</h2>
+          <ul>
+           <li>
+               <span><i class="fa-regular fa-envelope"></i></span>
+               <a href="#">facultyfeedback@gmail.com</a>
+           </li>
+           <li>
+               <span><i class="fa-solid fa-phone"></i></span>
+               <a href="#">000 000 0000</a>
+           </li>
+          </ul>
+       </div>
+      </div>
+      <div class="copy-right">
+       <p>&copy Copyright 2024 | All Rights Reserved</p>
+      </div>
+   </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    .form{
+        margin:0px;
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: "Poppins",sans-serif;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width:85%;
+        max-width: 400px;
+        box-shadow: #888 0px 0px 10px;
+        border-radius: 20px;
+    }
+
+    .form .form-header{
+        display: grid;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .form .form-header h2{
+        font-size: 32px;
+        color:#170bc6;
+        margin-bottom: 5px;
+    
+    }
+
+    .form .form-header p{
+        font-size: 15px;
+        color:#fa0303;
+        font-weight: bold;
+    }
+
+     .form .form-input{
+      position: relative;
+      border:3px solid #111;
+      z-index: 2;
+      background: #fff;
+      margin-bottom: 22px;
+      transition:all 200ms ease-in-out;
+      
+     }
+
+     .form .form-input label{
+        padding: 4px 8px 0px 8px;
+        display: block;
+        background-color: #fff;
+        font-size: 16px;
+     }
+
+     .form .form-input input{
+        padding: 10px;
+        width:100%;
+        border:1px solid white;
+        outline:none;  
+        font-size: 15px;
+        box-sizing: border-box;
+     }
+
+     .form .form-input label:before{
+        content:"";
+        position:absolute;
+        bottom:10px;
+        left:10px;
+        width: 100%;
+        height: 60px;
+        background: #111;
+        z-index: -1;
+        transition: all 200ms ease-in-out;
+     }
+
+     .form .form-input.valid{
+        border: 2px solid #0619ec;
+     }
+
+     .form .form-input.valid label:before{
+        background: #24e134;
+        
+     }
+
+     .form .form-input.error{
+        border:1px solid #ed5438;
+     }
+
+     .form .form-input.error label:before{
+        background-color: #ed5438;
+     }
+
+     .form .form-submit button{
+        width: 100%;
+        height: 50px;
+        color:#fff;
+        border: none;
+        outline: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight:600;
+        background: rgba(6, 46, 250, 0.92);
+        font-weight: 600;
+        transition:all 0.2 ease-in-out;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      } 
+
+      button:active{
+    transform: translateY(3px);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+ }
+
+ .support-links{
+    font-size: 14px;
+    display: flex;
+    justify-content:space-between;
+    margin-top: 20px;   
+    margin-bottom: 10px; 
+
+ }
+
+ .support-links a{
+    text-decoration: none;
+    color:#1159a5fe;
+
+ }
+
+ .support-links a:hover{
+    text-decoration:underline;
+ }
+
+
+ .captcha .preview{
+  width:60%;
+  color:#555;
+  text-align: center;
+  height: 40px;
+  line-height:40px;
+  letter-spacing: 9px;
+  border:3px dashed #888;
+  font-family: monospace;
+   display: inline-block;
+   user-select: none;
+ margin-bottom: 5px;
+}
+
+.captcha .captcha-form{
+    display: flex;
+}
+
+.captcha .captcha-form input{
+    width:100%;
+    padding:8px;
+    border:5px solid #888;
+}
+
+.captcha .captcha-form .captcha-refresh{
+    width:40px;
+    border:none;
+    outline:none;
+    background: #888;
+    color:#eee;
+    cursor:pointer;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- <div class="navbar flex-space">
+        <div class="logo-flex">
+          <img src="final_logo.png" width="160px" alt="logo" />
+        </div>
+        <ul class="flex">
+          <li><a href="homepage.html">HOME</a></li>
+          <li><a href="admin_registration.html">ADMIN</a></li>
+          <li><a href="faculty_registration.html">FACULTY</a></li>
+          <li><a href="student_registration.html">STUDENT</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="team.html">TEAM</a></li>
+        </ul>
+      </div>
+      <br /><br /><br /> -->
+
+
+    <div class="form" id="login-form">
+        <div class="form-header">
+            <h2>Login to Your Account</h2>
+            <p>Welcome! Login to Access to Your Dashboard!!</p>
+        </div>
+        
+        <div class="form-input">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Username">
+        </div>
+        
+        <div class="form-input">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Password">
+        </div>
+
+        <div class="captcha">
+            <label for="captcha-input">Enter Captcha</label>
+            <div class="preview"></div>
+                <div class="captcha-form">
+                    <input type="text" id="captcha-form" placeholder="Enter Captcha Text">
+                    <button class="captcha-refresh">
+                        <i class="fa fa-refresh">R</i>
+                    </button>
+                </div>
+            </div>
+        
+
+
+
+        <div class="support-links">
+            <a href="#"><i>Forget Password?</i></a> 
+            <a href="#"><i>Need Help? Contact Support.</i></a></p> 
+        </div>
+        
+
+
+        <div class="form-submit">
+            <button>Login</button>
+        </div>
+        
+        
+        <!--forget password form-->
+    </div>
+</div>
+    </div>
+
+    
+<script>
+    
+    function showForgetPassword() {
+        document.getElementById("login-form").classList.add("hidden");
+        document.getElementById("forget-password-form").classList.remove("hidden");
+    }
+
+    function showLoginForm() {
+        document.getElementById("forget-password-form").classList.add("hidden");
+        document.getElementById("login-form").classList.remove("hidden");
+    }
+
+    document.querySelector("#username").addEventListener("input",(e)=>{
+    const value = e.target.value;
+    const node = e.target.parentNode;
+    node.classList.remove("error");
+    node.classList.remove("valid");
+    if(value.length < 6){
+        node.classList.add("error");
+    }
+    else{
+        node.classList.add("valid");
+    }
+
+})
+
+document.querySelector("#password").addEventListener("input",(e)=>{
+    const value = e.target.value;
+    const node = e.target.parentNode;
+    node.classList.remove("error");
+    node.classList.remove("valid");
+    if(value.length < 8){
+        node.classList.add("error");
+    }
+    else{
+        node.classList.add("valid");
+    }
+
+});
+
+
+
+(function(){
+    const fonts = ["cursive", "sans-serif", "serif", "monospace"];
+    let captchaValue = "";
+
+    function generateCaptcha(){
+        let value = btoa(Math.random() * 1000000000);
+        value = value.substr(0, 5 + Math.random() * 5);
+        captchaValue = value;
+    }
+
+    function setCaptcha(){
+        let html = captchaValue.split("").map((char) => {
+            const rotate = -20 + Math.trunc(Math.random() * 40);
+            const font = Math.trunc(Math.random() * fonts.length);
+            return `<span style="display: inline-block; transform: rotate(${rotate}deg); font-family: ${fonts[font]};">${char}</span>`;
+        }).join("");
+
+        document.querySelector(".captcha .preview").innerHTML = html;
+    }
+
+    function initCaptcha(){
+        document.querySelector(".captcha .captcha-refresh").addEventListener("click", function(){
+            generateCaptcha();
+            setCaptcha();
+        });
+
+        generateCaptcha();
+        setCaptcha();
+    }
+
+    initCaptcha();
+
+    document.querySelector(".form-submit button").addEventListener("click", function(){
+        let inputCaptchaValue = document.querySelector("#captcha-form").value.trim();
+        
+        if (inputCaptchaValue === captchaValue) {
+            alert("Logging In!!");
+        } else {
+            alert("Invalid CAPTCHA");
+        }
+    });
+})();
+
+
+</script>
+
+</body>
+</html>
